@@ -12,6 +12,7 @@ class Crawler
     protected $_pass;
     protected $_seen = array();
     protected $_filter = array();
+
     public function __construct($url, $depth = 5)
     {
         $this->_url = $url;
@@ -19,6 +20,7 @@ class Crawler
         $parse = parse_url($url);
         $this->_host = $parse['host'];
     }
+
     protected function _processAnchors($content, $url, $depth)
     {
         $dom = new \DOMDocument('1.0');
@@ -47,6 +49,7 @@ class Crawler
             $this->crawl_page($href, $depth - 1);
         }
     }
+
     protected function _getContent($url)
     {
         $handle = curl_init($url);
@@ -67,6 +70,7 @@ class Crawler
         curl_close($handle);
         return array($response, $httpCode, $time);
     }
+
     protected function _printResult($url, $depth, $httpcode, $time)
     {
         ob_end_flush();
@@ -76,6 +80,7 @@ class Crawler
         ob_start();
         flush();
     }
+
     protected function isValid($url, $depth)
     {
         if (strpos($url, $this->_host) === false
@@ -91,6 +96,7 @@ class Crawler
         }
         return true;
     }
+
     public function crawl_page($url, $depth)
     {
         if (!$this->isValid($url, $depth)) {
@@ -103,16 +109,19 @@ class Crawler
         // process subPages
         $this->_processAnchors($content, $url, $depth);
     }
+
     public function setHttpAuth($user, $pass)
     {
         $this->_useHttpAuth = true;
         $this->_user = $user;
         $this->_pass = $pass;
     }
+
     public function addFilterPath($path)
     {
         $this->_filter[] = $path;
     }
+    
     public function run()
     {
         $this->crawl_page($this->_url, $this->_depth);

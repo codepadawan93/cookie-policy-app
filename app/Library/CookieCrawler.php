@@ -20,6 +20,7 @@ class CookieCrawler extends Crawler{
         }
         return $cookies;
     }
+    
     public function run()
     {
         $this->crawl_page($this->_url, $this->_depth);
