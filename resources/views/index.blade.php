@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Colorlib App - App Landing Page</title>
+    <title>Cookie App</title>
 
     <!-- Favicon -->
     <link rel="icon" href="./vendor/landingpage/img/core-img/favicon.ico">
@@ -37,7 +37,7 @@
                     <div class="menu_area">
                         <nav class="navbar navbar-expand-lg navbar-light">
                             <!-- Logo -->
-                            <a class="navbar-brand" href="#">Ca.</a>
+                            <a class="navbar-brand" href="#">Cookie App</a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ca-navbar" aria-controls="ca-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                             <!-- Menu Area -->
                             <div class="collapse navbar-collapse" id="ca-navbar">
@@ -75,13 +75,14 @@
             <div class="row h-100 align-items-center">
                 <div class="col-12 col-md">
                     <div class="wellcome-heading">
-                        <h2>Colorlib app</h2>
+                        <h2>Cookie App</h2>
                         <h3>C</h3>
-                        <p>Everything You Need. To Start Selling Online Beautifully</p>
+                        <p>Everything You Need To Gain GDPR Compliance</p>
                     </div>
                     <div class="get-start-area">
                         <!-- Form Start -->
-                        <form action="#" method="post" class="form-inline">
+                        <form action="{{url('/signup')}}" method="post" class="form-inline">
+                            {{csrf_field()}}
                             <input type="email" class="form-control email" placeholder="name@company.com">
                             <input type="submit" class="submit" value="Get Started">
                         </form>
@@ -92,7 +93,7 @@
         </div>
         <!-- Welcome thumb -->
         <div class="welcome-thumb wow fadeInDown" data-wow-delay="0.5s">
-            <img src="img/bg-img/welcome-img.png" alt="">
+            <img src="./vendor/landingpage/img/bg-img/welcome-img.png" alt="">
         </div>
     </section>
     <!-- ***** Wellcome Area End ***** -->
@@ -149,7 +150,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="special_description_img">
-                            <img src="img/bg-img/special.png" alt="">
+                            <img src="./vendor/landingpage/img/bg-img/special.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 col-xl-5 ml-xl-auto">
@@ -341,22 +342,22 @@
                     <!-- App Screenshots Slides  -->
                     <div class="app_screenshots_slides owl-carousel">
                         <div class="single-shot">
-                            <img src="img/scr-img/app-1.jpg" alt="">
+                            <img src="./vendor/landingpage/img/scr-img/app-1.jpg" alt="">
                         </div>
                         <div class="single-shot">
-                            <img src="img/scr-img/app-2.jpg" alt="">
+                            <img src="./vendor/landingpage/img/scr-img/app-2.jpg" alt="">
                         </div>
                         <div class="single-shot">
-                            <img src="img/scr-img/app-3.jpg" alt="">
+                            <img src="./vendor/landingpage/img/scr-img/app-3.jpg" alt="">
                         </div>
                         <div class="single-shot">
-                            <img src="img/scr-img/app-4.jpg" alt="">
+                            <img src="./vendor/landingpage/img/scr-img/app-4.jpg" alt="">
                         </div>
                         <div class="single-shot">
-                            <img src="img/scr-img/app-5.jpg" alt="">
+                            <img src="./vendor/landingpage/img/scr-img/app-5.jpg" alt="">
                         </div>
                         <div class="single-shot">
-                            <img src="img/scr-img/app-3.jpg" alt="">
+                            <img src="./vendor/landingpage/img/scr-img/app-3.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -572,16 +573,16 @@
                 <div class="col-12 col-md-6 col-lg-5">
                     <div class="slider slider-nav">
                         <div class="client-thumbnail">
-                            <img src="img/bg-img/client-3.jpg" alt="">
+                            <img src="./vendor/landingpage/img/bg-img/client-3.jpg" alt="">
                         </div>
                         <div class="client-thumbnail">
-                            <img src="img/bg-img/client-2.jpg" alt="">
+                            <img src="./vendor/landingpage/img/bg-img/client-2.jpg" alt="">
                         </div>
                         <div class="client-thumbnail">
-                            <img src="img/bg-img/client-1.jpg" alt="">
+                            <img src="./vendor/landingpage/img/bg-img/client-1.jpg" alt="">
                         </div>
                         <div class="client-thumbnail">
-                            <img src="img/bg-img/client-2.jpg" alt="">
+                            <img src="./vendor/landingpage/img/bg-img/client-2.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -626,7 +627,7 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="single-team-member">
                         <div class="member-image">
-                            <img src="img/team-img/team-1.jpg" alt="">
+                            <img src="./vendor/landingpage/img/team-img/team-1.jpg" alt="">
                             <div class="team-hover-effects">
                                 <div class="team-social-icon">
                                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -645,7 +646,7 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="single-team-member">
                         <div class="member-image">
-                            <img src="img/team-img/team-2.jpg" alt="">
+                            <img src="./vendor/landingpage/img/team-img/team-2.jpg" alt="">
                             <div class="team-hover-effects">
                                 <div class="team-social-icon">
                                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -664,7 +665,7 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="single-team-member">
                         <div class="member-image">
-                            <img src="img/team-img/team-3.jpg" alt="">
+                            <img src="./vendor/landingpage/img/team-img/team-3.jpg" alt="">
                             <div class="team-hover-effects">
                                 <div class="team-social-icon">
                                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -683,7 +684,7 @@
                 <div class="col-12 col-md-6 col-lg-3">
                     <div class="single-team-member">
                         <div class="member-image">
-                            <img src="img/team-img/team-4.jpg" alt="">
+                            <img src="./vendor/landingpage/img/team-img/team-4.jpg" alt="">
                             <div class="team-hover-effects">
                                 <div class="team-social-icon">
                                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -730,7 +731,8 @@
                 <div class="col-md-6">
                     <!-- Form Start-->
                     <div class="contact_from">
-                        <form action="#" method="post">
+                        <form action="{{url('/contact-us')}}" method="post">
+                            {{csrf_field()}}
                             <!-- Message Input Area Start -->
                             <div class="contact_input_area">
                                 <div class="row">
@@ -793,7 +795,7 @@
         <!-- Foooter Text-->
         <div class="copyright-text">
             <!-- ***** Removing this text is now allowed! This template is licensed under CC BY 3.0 ***** -->
-            <p>Copyright ©2017 Ca. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
+            <!--<p>Copyright ©2017 Ca. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>-->
         </div>
     </footer>
     <!-- ***** Footer Area Start ***** -->
@@ -812,6 +814,10 @@
     <script src="./vendor/landingpage/js/footer-reveal.min.js"></script>
     <!-- Active JS -->
     <script src="./vendor/landingpage/js/active.js"></script>
+    <!-- custom scripts -->
+    <script>
+        $("#signup").click((e)=>alert(e));
+    </script>
 </body>
 
 </html>

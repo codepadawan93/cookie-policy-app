@@ -11,9 +11,9 @@
 | 73WA23z22M
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'IndexController@index');
+Route::post('/signup', 'IndexController@signup');
+Route::post('/contact-us', 'IndexController@contactUs');
 
 
 Route::group(['prefix' => 'admin'], function () {
